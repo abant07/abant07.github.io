@@ -60,13 +60,13 @@ When you use HomeIn on Zillow, the extension calls Zillow's own internal APIs us
 
 These requests are identical to what Zillow's own interface sends. HomeIn is not sending additional personal information to Zillow beyond what Zillow already receives from your normal use of the site.
 
-Zillow's privacy policy applies to these requests: [https://www.zillow.com/z/corp/privacy/](https://www.zillow.com/z/corp/privacy/)
+Zillow's privacy policy applies to these requests: [Zillow Privacy Policy]([https://www.zillow.com/z/corp/privacy/](https://www.zillow.com/corporate/zg-privacy-notice/))
 
 ### FEMA National Risk Index / Esri ArcGIS (`services.arcgis.com`)
 
 When you use the Hazards feature, the extension's background service worker sends a geographic bounding box (the coordinates of the visible Zillow map area) to FEMA's publicly available National Risk Index API, hosted on ArcGIS Online. No personally identifiable information is included in this request. The API requires no authentication and is freely accessible to anyone.
 
-Esri's privacy policy applies to this request: [https://www.esri.com/en-us/privacy/overview](https://www.esri.com/en-us/privacy/overview)
+Esri's privacy policy applies to this request: [Esri Privacy Policy](https://www.esri.com/en-us/privacy/overview)
 
 ---
 
