@@ -8,7 +8,7 @@
 
 ## Overview
 
-HomeIn is a Chrome extension that adds map overlays to Zillow's home search — including commute isochrone zones, school attendance boundaries, points of interest, and FEMA natural disaster risk shading. This policy explains what data the extension handles, how it is used, and what is shared with third parties.
+HomeIn is a Chrome extension that adds map overlays to Zillow's home search — including commute isochrone zones, school attendance boundaries, points of interest, and FEMA geological hazard risk shading. This policy explains what data the extension handles, how it is used, and what is shared with third parties.
 
 **The short version:** HomeIn has no backend server. No data you enter or generate while using this extension is ever transmitted to the developer. Everything is stored on your own device or passed to services you are already using (Zillow and FEMA's public API).
 
@@ -26,7 +26,7 @@ HomeIn stores the following data locally in your browser using `chrome.storage.l
 | Selected school zones (school name, display color) | Remember which schools you have pinned |
 | School zone apply mode (union or intersect) | Remember your preferred filtering method |
 | POI category preferences (which types are checked) | Remember which points of interest to show |
-| Hazard filter settings (which hazard types are enabled, risk thresholds) | Remember your natural disaster filter preferences |
+| Hazard filter settings (which hazard types are enabled, risk thresholds) | Remember your geological hazard filter preferences |
 | Google Maps travel mode preference | Remember your preferred mode for route previews |
 
 ### Session data (automatically cleared 30 minutes after your last activity, or when you navigate to a different region)
