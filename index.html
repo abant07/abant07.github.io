@@ -1,16 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HomeIn</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>HomeIn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --ink: #1a1d23;
+    --muted: #5b6270;
+    --line: #e6e8eb;
+    --accent: #2f6fed;
+    --accent-soft: #eef3fe;
+    --bg: #fafbfc;
+    --card: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .logo {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero p.lede {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .btn:hover { opacity: 0.85; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .btn-secondary {
+    background: var(--card);
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 44px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+
+  p { margin: 12px 0; color: #2a2e36; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .links-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  .links-card a.row {
+    display: block;
+    padding: 14px 18px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .links-card a.row:last-child { border-bottom: none; }
+  .links-card a.row:hover { background: var(--accent-soft); border-radius: 6px; text-decoration: none; }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .social-item {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: border-color 0.15s ease, transform 0.1s ease;
+  }
+
+  .social-item:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  .social-item svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+    margin: 0 auto 8px;
+    fill: var(--accent);
+  }
+
+  .social-item span.handle {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 480px) {
+    .social-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  footer a { color: var(--muted); }
+</style>
 </head>
-<body style="font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6;">
-  <h1>HomeIn</h1>
-  <p>Welcome to HomeIn's home page! Pretty basic huh</p>
-  <p>To see how HomeIn handles your data, see our privacy policy page below. For all other inquires contact me at <a href="mailto:amoghbantwal@gmail.com">amoghbantwal@gmail.com</a></p>
-  <ul>
-    <li><a href="/privacy-policy/">Privacy Policy</a></li>
-  </ul>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <img src="/icon.png" alt="HomeIn logo" class="logo">
+    <h1>HomeIn</h1>
+    <p class="lede">A Chrome extension that adds commute zones, school boundaries, points of interest, and hazard data right onto your Zillow home search.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/homein/foiphkdnoibiohgiajkpcmpcbolaocjb?authuser=3&hl=en" target="_blank" rel="noopener">Get HomeIn on Chrome Web Store</a>
+    </div>
+  </div>
+
+  <h2>Links</h2>
+  <div class="links-card">
+    <a class="row" href="/privacy-policy/">Privacy Policy</a>
+    <a class="row" href="/support/">Support</a>
+    <a class="row" href="mailto:amoghbantwal@gmail.com">amoghbantwal@gmail.com</a>
+  </div>
+
+  <h2>Follow along</h2>
+  <div class="social-grid">
+
+    <a class="social-item" href="https://instagram.com/find.homein" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5c-2.48 0-4.5 2.02-4.5 4.5s2.02 4.5 4.5 4.5 4.5-2.02 4.5-4.5-2.02-4.5-4.5-4.5zm0 2c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5zm4.75-3.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+      Instagram
+      <span class="handle">@find.homein</span>
+    </a>
+
+    <a class="social-item" href="https://tiktok.com/@homein" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M16.5 2c.3 1.9 1.5 3.5 3.5 4v2.6c-1.5 0-2.9-.4-4-1.2v6.7c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.4 0 .8 0 1.2.1v2.7c-.4-.1-.8-.2-1.2-.2-1.8 0-3.3 1.5-3.3 3.3s1.5 3.3 3.3 3.3 3.3-1.5 3.3-3.3V2h3.2z"/></svg>
+      TikTok
+      <span class="handle">@homein</span>
+    </a>
+
+    <a class="social-item" href="https://twitter.com/homein" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.2 8.2L22.5 22h-6.6l-5.2-6.8L4.6 22H2l7.7-8.8L1.7 2h6.7l4.7 6.3L18.9 2zm-2.3 18h1.8L8.5 4H6.6l10 16z"/></svg>
+      Twitter / X
+      <span class="handle">@homein</span>
+    </a>
+
+    <a class="social-item" href="https://youtube.com/@homein" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21.6 7.2s-.2-1.5-.8-2.2c-.8-.8-1.7-.8-2.1-.9C15.9 4 12 4 12 4h0s-3.9 0-6.7.1c-.4 0-1.3.1-2.1.9-.6.6-.8 2.2-.8 2.2S2.2 9 2.2 10.8v1.3C2.2 13.9 2.4 15.7 2.4 15.7s.2 1.5.8 2.2c.8.8 1.9.8 2.4.9 1.7.2 7.4.2 7.4.2s3.9 0 6.7-.1c.4 0 1.3-.1 2.1-.9.6-.6.8-2.2.8-2.2s.2-1.8.2-3.6v-1.3c0-1.8-.2-3.6-.2-3.6zM9.9 14.6V8.9l5.4 2.9-5.4 2.8z"/></svg>
+      YouTube
+      <span class="handle">@homein</span>
+    </a>
+
+  </div>
+
+  <footer>
+    HomeIn for Chrome &middot; <a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/support/">Support</a>
+  </footer>
+
+</div>
 </body>
 </html>
