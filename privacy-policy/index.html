@@ -1,49 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy — HomeIn Chrome Extension</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    h2 { margin-top: 32px; border-top: 1px solid #eee; padding-top: 16px; }
-  </style>
+<meta charset="UTF-8">
+<title>Privacy Policy — HomeIn Chrome Extension</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --ink: #1a1d23;
+    --muted: #5b6270;
+    --line: #e6e8eb;
+    --accent: #2f6fed;
+    --accent-soft: #eef3fe;
+    --bg: #fafbfc;
+    --card: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.page-head {
+    margin-bottom: 40px;
+  }
+
+  header.page-head h1 {
+    font-size: 1.9rem;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  .meta strong { color: var(--ink); }
+
+  .meta a { color: var(--accent); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+
+  .tldr {
+    background: var(--accent-soft);
+    border: 1px solid #d7e4fb;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 28px 0 36px;
+    font-size: 0.97rem;
+  }
+
+  .tldr strong { color: var(--accent); }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 44px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h3 {
+    font-size: 1.02rem;
+    margin: 26px 0 10px;
+    color: var(--ink);
+  }
+
+  p { margin: 12px 0; color: #2a2e36; }
+
+  ul, ol { padding-left: 22px; margin: 12px 0; }
+  li { margin: 6px 0; }
+
+  code {
+    background: #f1f2f4;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.88em;
+    font-family: "SF Mono", Consolas, monospace;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 0.92rem;
+    background: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  th {
+    background: #f3f4f6;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  a { color: var(--accent); }
+
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-top: 14px;
+  }
+
+  .contact-card strong { display: block; margin-bottom: 4px; }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  footer a { color: var(--muted); }
+</style>
 </head>
 <body>
-  <h1>Privacy Policy — HomeIn Chrome Extension</h1>
-  <p><strong>Last updated:</strong> June 25, 2026<br>
-  <strong>Developer:</strong> Amogh Bantwal (individual developer)<br>
-  <strong>Contact:</strong> <a href="mailto:amoghbantwal@gmail.com">amoghbantwal@gmail.com</a></p>
+<div class="wrap">
 
-  <h2>Overview</h2>
+  <header class="page-head">
+    <h1>Privacy Policy — HomeIn Chrome Extension</h1>
+    <div class="meta">
+      <strong>Last updated:</strong> June 26, 2026<br>
+      <strong>Developer:</strong> Amogh Bantwal (individual developer)<br>
+      <strong>Contact:</strong> <a href="mailto:amoghbantwal@gmail.com">amoghbantwal@gmail.com</a>
+    </div>
+  </header>
+
   <p>HomeIn is a Chrome extension that adds map overlays to Zillow's home search — including commute isochrone zones, school attendance boundaries, points of interest, and FEMA geological hazard risk shading. This policy explains what data the extension handles, how it is used, and what is shared with third parties.</p>
-  <p><strong>The short version:</strong> HomeIn has no backend server. No data you enter or generate while using this extension is ever transmitted to the developer. Everything is stored on your own device or passed to services you are already using (Zillow and FEMA's public API).</p>
+
+  <div class="tldr">
+    <strong>The short version:</strong> HomeIn has no backend server. No data you enter or generate while using this extension is ever transmitted to the developer. Everything is stored on your own device or passed to services you are already using (Zillow and FEMA's public API).
+  </div>
 
   <h2>1. Data Stored on Your Device</h2>
   <p>HomeIn stores the following data locally in your browser using <code>chrome.storage.local</code>. This data never leaves your device to the developer.</p>
 
-  <h3>Persistent preferences (kept until you uninstall or clear extension storage)</h3>
+  <h3>Persistent preferences (kept until you remove them, uninstall, or clear extension storage)</h3>
   <table>
     <tr><th>Data</th><th>Purpose</th></tr>
     <tr><td>Commute destinations (label, address, coordinates, travel mode, max commute time)</td><td>Populate your saved destination list in the side panel</td></tr>
-    <tr><td>Selected school zones (school name, display color)</td><td>Remember which schools you have pinned</td></tr>
+    <tr><td>Selected school zones (school name, display color, and coordinates)</td><td>Remember which schools you have pinned</td></tr>
+    <tr><td>School zone boundary polygons (GeoJSON coordinates of school attendance zones)</td><td>Restore school boundaries without re-fetching from Zillow after page reloads or tab restarts</td></tr>
     <tr><td>School zone apply mode (union or intersect)</td><td>Remember your preferred filtering method</td></tr>
     <tr><td>POI category preferences (which types are checked)</td><td>Remember which points of interest to show</td></tr>
     <tr><td>Hazard filter settings (which hazard types are enabled, risk thresholds)</td><td>Remember your geological hazard filter preferences</td></tr>
     <tr><td>Google Maps travel mode preference</td><td>Remember your preferred mode for route previews</td></tr>
+    <tr><td>Google Maps route start and end points (coordinates and address label)</td><td>Remember the origin and destination you set via the Route button on listing cards; cleared when you manually remove them</td></tr>
   </table>
 
-  <h3>Session data (automatically cleared 30 minutes after your last activity, or when you navigate to a different region)</h3>
+  <h3>Session data (automatically cleared 30 minutes after your last activity, or when you navigate to a different Zillow region)</h3>
   <table>
     <tr><th>Data</th><th>Purpose</th></tr>
     <tr><td>Active commute zone polygon</td><td>Restore the commute overlay after a page reload without re-fetching</td></tr>
-    <tr><td>Active school zone boundaries</td><td>Restore school boundaries after a page reload</td></tr>
+    <tr><td>School zone overlay visibility state</td><td>Track whether school boundaries are currently rendered on the map</td></tr>
     <tr><td>Active POI markers</td><td>Restore POI pins after a page reload</td></tr>
     <tr><td>Active hazard tract polygons</td><td>Restore hazard shading after a page reload</td></tr>
     <tr><td>Cached region polygon and WKT</td><td>Power hazard intersection and school zone filtering</td></tr>
-    <tr><td>GMaps origin and destination coordinates</td><td>Restore the Google Maps route preview after a page reload</td></tr>
     <tr><td>POI and hazard visibility state</td><td>Remember if you hid overlays without removing them</td></tr>
     <tr><td>Hidden school IDs</td><td>Remember which school boundaries you hid</td></tr>
   </table>
@@ -60,16 +203,17 @@
     <li>A search query string — when using the commute destination autocomplete</li>
   </ul>
   <p>These requests are identical to what Zillow's own interface sends. HomeIn is not sending additional personal information to Zillow beyond what Zillow already receives from your normal use of the site.</p>
-  <p>Zillow's privacy policy applies to these requests: <a href="https://www.zillow.com/z/corp/privacy/">https://www.zillow.com/z/corp/privacy/</a></p>
+  <p>Points of interest (fitness centers, supermarkets, hospitals, etc.) are served entirely from a database bundled within the extension itself. No external API call is made when you use the POI feature.</p>
+  <p>Zillow's privacy policy applies to these requests: <a href="https://www.zillow.com/z/corp/privacy/" target="_blank" rel="noopener">zillow.com/z/corp/privacy</a></p>
 
   <h3>FEMA National Risk Index / Esri ArcGIS (services.arcgis.com)</h3>
   <p>When you use the Hazards feature, the extension's background service worker sends a geographic bounding box (the coordinates of the visible Zillow map area) to FEMA's publicly available National Risk Index API, hosted on ArcGIS Online. No personally identifiable information is included in this request. The API requires no authentication and is freely accessible to anyone.</p>
-  <p>Esri's privacy policy applies to this request: <a href="https://www.esri.com/en-us/privacy/overview">https://www.esri.com/en-us/privacy/overview</a></p>
+  <p>Esri's privacy policy applies to this request: <a href="https://www.esri.com/en-us/privacy/overview" target="_blank" rel="noopener">esri.com/en-us/privacy/overview</a></p>
 
   <h2>3. Data the Extension Reads</h2>
   <p>To function, HomeIn reads the following data from within your browser. This data is processed locally and is not transmitted to the developer.</p>
   <ul>
-    <li><strong>Zillow page content</strong> — The extension passively intercepts Zillow's own API responses (listing coordinates, region boundary polygons, school data) as they load in the page, to avoid making duplicate network requests. This data is held in memory and used only to power the extension's map overlays.</li>
+    <li><strong>Zillow page content</strong> — The extension passively intercepts Zillow's own API responses (listing coordinates and addresses, region boundary polygons, school data) as they load in the page, to avoid making duplicate network requests. Listing addresses and coordinates are held in memory and used to power the Route button that appears on each listing card, allowing you to set a listing as the start or end of a Google Maps route. This data is processed locally and not transmitted to the developer.</li>
     <li><strong>Current tab URL</strong> — The extension reads the active tab's URL to determine whether you are on a Zillow home search page, and to extract the current map region from Zillow's <code>searchQueryState</code> URL parameter.</li>
   </ul>
 
@@ -88,8 +232,8 @@
 
   <h2>6. Data Retention</h2>
   <ul>
-    <li><strong>Preferences</strong> (commute destinations, school selections, POI and hazard settings) are retained in your browser's local storage until you uninstall the extension or manually clear its data via Chrome's extension settings.</li>
-    <li><strong>Session data</strong> (cached overlays, active region polygons) is automatically cleared 30 minutes after your last interaction, or immediately when you navigate to a different Zillow region.</li>
+    <li><strong>Persistent data</strong> (commute destinations, school selections and their boundary polygons, POI and hazard settings, Google Maps route endpoints) is retained in your browser's local storage until you remove it within the extension, uninstall the extension, or manually clear its data via Chrome's extension settings.</li>
+    <li><strong>Session data</strong> (cached overlays, active region polygons, visibility state) is automatically cleared 30 minutes after your last interaction, or immediately when you navigate to a different Zillow region.</li>
     <li>The developer retains no data whatsoever, as no data is transmitted to the developer.</li>
   </ul>
 
@@ -101,9 +245,18 @@
 
   <h2>9. Contact</h2>
   <p>If you have questions or concerns about this privacy policy or the extension's data practices, please contact:</p>
-  <p><strong>Amogh Bantwal</strong><br><a href="mailto:amoghbantwal@gmail.com">amoghbantwal@gmail.com</a></p>
+  <div class="contact-card">
+    <strong>Amogh Bantwal</strong>
+    <a href="mailto:amoghbantwal@gmail.com">amoghbantwal@gmail.com</a>
+  </div>
 
   <h2>10. Governing Law</h2>
   <p>This policy is governed by the laws of the United States. By using this extension, you agree to the terms of this privacy policy.</p>
+
+  <footer>
+    HomeIn for Chrome &middot; <a href="/">Home</a> &middot; <a href="/support/">Support</a>
+  </footer>
+
+</div>
 </body>
 </html>
